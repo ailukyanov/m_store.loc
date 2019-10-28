@@ -503,4 +503,50 @@ a, a:hover {
   height: 33px;
   background: url(../images/home.png) no-repeat; }
 
+/* Сортировка */
+.sorting {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  padding: 18px 20px; }
+
+.s-category li {
+  float: left;
+  background: url(../images/s-sp.png) no-repeat right center; }
+  .s-category li:last-child {
+    background-image: none; }
+
+.s-category a {
+  display: inline-block;
+  padding-left: 7px;
+  padding-right: 12px;
+  text-transform: uppercase;
+  color: #1e1e20; }
+  .s-category a:hover {
+    font-weight: bold;
+    color: #000; }
+
+.s-category .active a {
+  font-weight: bold;
+  color: #000; }
+
+.s-list {
+  float: right; }
+  .s-list a {
+    display: inline-block;
+    vertical-align: middle; }
+    .s-list a + a {
+      margin-left: 10px; }
+  .s-list .ic-squares {
+    width: 28px;
+    height: 18px;
+    background: url(../images/squares.png) no-repeat; }
+  .s-list .ic-list {
+    width: 30px;
+    height: 20px;
+    background: url(../images/list.png) no-repeat; }
+
+.select-sort {
+  display: inline-block;
+  margin-right: 80px; }
+
 /*# sourceMappingURL=main.css.map */

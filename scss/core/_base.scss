@@ -252,3 +252,71 @@ a, a:hover {
   background: url(../images/home.png) no-repeat;
 }
 
+/* Сортировка */
+.sorting {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  padding: 18px 20px;
+}
+
+.s-category {
+  li {
+    float: left;
+    background: url(../images/s-sp.png) no-repeat right center;
+
+    &:last-child {
+      background-image: none;
+    }
+  }
+
+  a {
+    display:inline-block;
+    padding-left: 7px;
+    padding-right: 12px;
+    text-transform: uppercase;
+    color: #1e1e20;
+
+    &:hover {
+      font-weight: bold;
+      color: #000;
+    }
+  }
+
+  .active {
+    a {
+      font-weight: bold;
+      color: #000;
+    }
+  }
+}
+
+.s-list {
+  float: right;
+
+  a {
+    display: inline-block;
+    vertical-align: middle;
+
+    & + a {
+      margin-left: 10px;
+    }
+  }
+
+  .ic-squares {
+    width: 28px;
+    height: 18px;
+    background: url(../images/squares.png) no-repeat ;
+  }
+
+  .ic-list {
+    width: 30px;
+    height: 20px;
+    background: url(../images/list.png) no-repeat;
+  }
+}
+
+.select-sort {
+  display: inline-block;
+  margin-right: 80px;
+}
+
