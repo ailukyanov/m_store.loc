@@ -256,7 +256,7 @@ a, a:hover {
 .sorting {
   background: #fff;
   border: 1px solid #eaeaea;
-  padding: 18px 20px;
+  padding: 18px 0 18px 0;
 }
 
 .s-category {
@@ -284,6 +284,7 @@ a, a:hover {
 
   .active {
     a {
+      padding-left: 20px;
       font-weight: bold;
       color: #000;
     }
@@ -291,6 +292,7 @@ a, a:hover {
 }
 
 .s-list {
+  padding-right: 20px;
   float: right;
 
   a {
@@ -318,5 +320,146 @@ a, a:hover {
 .select-sort {
   display: inline-block;
   margin-right: 80px;
+
+  .sort-by {
+    padding-right: 14px;
+  }
 }
+
+/* Сайдбар */
+.sidebar {
+  width: 260px;
+}
+
+.sidebar-title {
+  position: relative;
+  margin-top: 35px;
+  padding: 0 0 15px 15px;
+  font: normal 18px/20px 'Oswald', sans-serif;
+  color: #2a2b2c;
+  text-transform: uppercase;
+  border-bottom: 1px dotted #d5d5d5;
+
+  .sidebar-title-br {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 40px;
+    height: 7px;
+    margin-top: -3px;
+    background: #cc3333;
+  }
+}
+
+.sidebar-products {
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.sidebar-products-img {
+  float: left;
+  overflow: hidden;
+  padding: 5px 0;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.sidebar-products-info {
+  padding-top: 15px;
+  margin-left: 105px;
+
+  .product {
+    margin: 8px 0;
+    font: bold 13px arial, sans-serif;
+    color: #2a2b2c;
+  }
+
+  /* Комментарии */
+  .comments {
+    background: url(../images/comments.png) no-repeat bottom left;
+    font: normal 11px arial, sans-serif;
+    color: #858585;
+    text-transform: uppercase;
+    padding-left: 20px;
+  }
+  /** Комментарии **/
+
+  /* Рейтинг звёздочки */
+  .rate {
+    background: url(../images/black-star.png) repeat-x;
+    margin:	10px 0 12px 0;
+    width: 73px;
+    height: 15px;
+
+    &>div {
+      background: url(../images/star.png) repeat-x;
+      height: 100%;
+    }
+  }
+  /** Рейтинг звездочки **/
+}
+
+.cat-list {
+  margin: 10px 0 20px 0;
+  padding-left: 15px;
+  list-style: url(../images/cat-list-style.png);
+  list-style-position: inside;
+
+  li {
+    padding: 10px 0;
+    border-bottom: 1px dotted #d5d5d5;
+
+    a {
+      font: bold 13px arial, sans-serif;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    span {
+      font-weight: normal;
+      color: #7d7e7e;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.sidebar-search {
+  position: relative;
+  padding-left: 15px;
+
+  input[type="text"] {
+    margin-top: 17px;
+    display: block;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    font-style: italic;
+    color: #1e1e1e;
+    width: 100%; /*width: 246px;*/
+    height: 40px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.06);
+  }
+
+  input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: transparent url(../images/s-search-btn.png) no-repeat center;
+    cursor: pointer;
+  }
+}
+/** Сайдбар **/
+
+/* Контент */
 

@@ -507,7 +507,7 @@ a, a:hover {
 .sorting {
   background: #fff;
   border: 1px solid #eaeaea;
-  padding: 18px 20px; }
+  padding: 18px 0 18px 0; }
 
 .s-category li {
   float: left;
@@ -526,10 +526,12 @@ a, a:hover {
     color: #000; }
 
 .s-category .active a {
+  padding-left: 20px;
   font-weight: bold;
   color: #000; }
 
 .s-list {
+  padding-right: 20px;
   float: right; }
   .s-list a {
     display: inline-block;
@@ -548,5 +550,114 @@ a, a:hover {
 .select-sort {
   display: inline-block;
   margin-right: 80px; }
+  .select-sort .sort-by {
+    padding-right: 14px; }
+
+/* Сайдбар */
+.sidebar {
+  width: 260px; }
+
+.sidebar-title {
+  position: relative;
+  margin-top: 35px;
+  padding: 0 0 15px 15px;
+  font: normal 18px/20px 'Oswald', sans-serif;
+  color: #2a2b2c;
+  text-transform: uppercase;
+  border-bottom: 1px dotted #d5d5d5; }
+  .sidebar-title .sidebar-title-br {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 40px;
+    height: 7px;
+    margin-top: -3px;
+    background: #cc3333; }
+
+.sidebar-products {
+  margin-top: 10px;
+  padding-left: 15px; }
+
+.sidebar-products-img {
+  float: left;
+  overflow: hidden;
+  padding: 5px 0; }
+  .sidebar-products-img img {
+    display: block;
+    width: 100%; }
+
+.sidebar-products-info {
+  padding-top: 15px;
+  margin-left: 105px;
+  /* Комментарии */
+  /** Комментарии **/
+  /* Рейтинг звёздочки */
+  /** Рейтинг звездочки **/ }
+  .sidebar-products-info .product {
+    margin: 8px 0;
+    font: bold 13px arial, sans-serif;
+    color: #2a2b2c; }
+  .sidebar-products-info .comments {
+    background: url(../images/comments.png) no-repeat bottom left;
+    font: normal 11px arial, sans-serif;
+    color: #858585;
+    text-transform: uppercase;
+    padding-left: 20px; }
+  .sidebar-products-info .rate {
+    background: url(../images/black-star.png) repeat-x;
+    margin: 10px 0 12px 0;
+    width: 73px;
+    height: 15px; }
+    .sidebar-products-info .rate > div {
+      background: url(../images/star.png) repeat-x;
+      height: 100%; }
+
+.cat-list {
+  margin: 10px 0 20px 0;
+  padding-left: 15px;
+  list-style: url(../images/cat-list-style.png);
+  list-style-position: inside; }
+  .cat-list li {
+    padding: 10px 0;
+    border-bottom: 1px dotted #d5d5d5; }
+    .cat-list li a {
+      font: bold 13px arial, sans-serif; }
+      .cat-list li a:hover {
+        text-decoration: underline; }
+    .cat-list li span {
+      font-weight: normal;
+      color: #7d7e7e; }
+    .cat-list li:last-child {
+      border-bottom: none; }
+
+.sidebar-search {
+  position: relative;
+  padding-left: 15px; }
+  .sidebar-search input[type="text"] {
+    margin-top: 17px;
+    display: block;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    font-style: italic;
+    color: #1e1e1e;
+    width: 100%;
+    /*width: 246px;*/
+    height: 40px;
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.06);
+       -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.06);
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.06); }
+  .sidebar-search input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: transparent url(../images/s-search-btn.png) no-repeat center;
+    cursor: pointer; }
+
+/** Сайдбар **/
+/* Контент */
 
 /*# sourceMappingURL=main.css.map */

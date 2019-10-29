@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<a id="home-link" href="#"></a> <!-- Кнопка наверх -->
+<!-- Кнопка наверх -->
+<a id="home-link" href="#"></a>
     <!-- Обвертка -->
     <div id="wrapper">
         <!-- Верхняя панель -->
@@ -96,19 +97,92 @@
             </div>
 
             <div class="select-sort right">
-                <span>Sort by:</span>
-                <select name="" id="" style="width: 125px;">
+                <span class="sort-by">Sort by:</span>
+                <select name="" id="" style="width: 104px;">
                     <option value="Alphabetically">Alphabetically</option>
-                    <option value="Alphabetically">Alphabetically-1</option>
-                    <option value="Alphabetically">Alphabetically-2</option>
-                    <option value="Alphabetically">Alphabetically-3</option>
-                    <option value="Alphabetically">Alphabetically-4</option>
                     <option value="Alphabetically">Alphabetically-1</option>
                     <option value="Alphabetically">Alphabetically-2</option>
                     <option value="Alphabetically">Alphabetically-3</option>
                     <option value="Alphabetically">Alphabetically-4</option>
                 </select>
             </div>
+        </div>
+
+        <div class=" middle center clearfix">
+            <!-- Сайдбар -->
+            <div class="sidebar right">
+                <h4 class="sidebar-title">price filter
+                    <span class="sidebar-title-br"></span>
+                </h4>
+
+                <!-- Ползунок --
+                <div class="s-slider">
+                    <div id="slider-range"></div>
+                    <p>
+                        <label for="amount">Price:</label>
+                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                        <button class="btn-bl">filter</button>
+                    </p>
+                </div>
+                <!-- // Ползунок -->
+
+                <h4 class="sidebar-title">best sellers
+                    <span class="sidebar-title-br"></span>
+                </h4>
+                <div class="sidebar-products ">
+                    <div class="sidebar-products-item clearfix">
+                        <div class="sidebar-products-img">
+                            <a href="#"><img src="images/image.jpg" alt=""></a>
+                        </div>
+                        <div class="sidebar-products-info">
+                            <h6><a href="#" class="product">Awaken the Hero</a></h6>
+                            <div class="rate">
+                                <div style="width: 80%;"></div>
+                            </div>
+                            <span class="comments">12 comments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-products">
+                    <div class="sidebar-products-item clearfix">
+                        <div class="sidebar-products-img">
+                            <a href="#"><img src="images/image-2.jpg" alt=""></a>
+                        </div>
+                        <div class="sidebar-products-info">
+                            <h6><a href="#" class="product">Caribou</a></h6>
+                            <div class="rate">
+                                <div style="width: 80%;"></div>
+                            </div>
+                            <span class="comments">25 comments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="sidebar-title">our categories
+                    <span class="sidebar-title-br"></span>
+                </h4>
+                <ul class="cat-list">
+                    <li><a href="#">Rock & Roll </a><span>(5)</span></li>
+                    <li><a href="#">Hardcore & Metal </a><span>(3)</span></li>
+                    <li><a href="#">Dance & Pop </a><span>(8)</span></li>
+                    <li><a href="#">Classical Music </a><span>(12)</span></li>
+                    <li><a href="#">Jazz </a><span>(7)</span></li>
+                    <li><a href="#">Country </a><span>(15)</span></li>
+                </ul>
+
+                <h4 class="sidebar-title">search our albums
+                    <span class="sidebar-title-br"></span>
+                </h4>
+                <form action="#" class="sidebar-search">
+                    <input type="text" placeholder="&emsp;Search...">
+                    <input type="submit" value="">
+                </form>
+            </div>
+            <!-- // Сайдбар -->
+
+            <!-- Контент -->
+
         </div>
 
     </div>
