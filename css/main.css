@@ -704,7 +704,7 @@ a, a:hover {
 
 .products h6 {
   margin: 8px 0;
-  font: bold 14px arial, sans-serif;
+  font: bold 13px arial, sans-serif;
   color: #2a2b2c; }
   .products h6 span {
     font-weight: normal;
@@ -712,7 +712,7 @@ a, a:hover {
 
 .products .product {
   margin: 8px 0;
-  font: bold 14px arial, sans-serif;
+  font: bold 13px arial, sans-serif;
   color: #2a2b2c; }
 
 /** Описание продукта **/
