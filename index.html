@@ -6,7 +6,38 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>M-Store</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Скрипт селекта -->
+    <script type="text/javascript" src="js/cusel-min-2.5.js"></script>
+    <!-- Скрипт ползунка -->
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="css/main.css">
+    <script>
+        $(function() {
+            /* Ползунок */
+            $( "#slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: 999,
+                values: [ 0, 999 ],
+                slide: function( event, ui ) {
+                    $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                }
+            });
+            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+                " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+        });
+
+        $(function() {
+            /* Селект */
+            var params = {
+                changedEl: "select",
+                visRows: 5,
+                scrollArrows: true
+            }
+            cuSel(params);
+        });
+    </script>
 </head>
 <body>
 <!-- Кнопка наверх -->
@@ -98,12 +129,17 @@
 
             <div class="select-sort right">
                 <span class="sort-by">Sort by:</span>
-                <select name="" id="" style="width: 104px;">
+                <select name="" id="" style="width: 115px;">
                     <option value="Alphabetically">Alphabetically</option>
-                    <option value="Alphabetically">Alphabetically-1</option>
-                    <option value="Alphabetically">Alphabetically-2</option>
-                    <option value="Alphabetically">Alphabetically-3</option>
-                    <option value="Alphabetically">Alphabetically-4</option>
+                    <option value="Alphabetically">Alphabetically1</option>
+                    <option value="Alphabetically">Alphabetically2</option>
+                    <option value="Alphabetically">Alphabetically3</option>
+                    <option value="Alphabetically">Alphabetically4</option>
+                    <option value="Alphabetically">Alphabetically5</option>
+                    <option value="Alphabetically">Alphabetically6</option>
+                    <option value="Alphabetically">Alphabetically7</option>
+                    <option value="Alphabetically">Alphabetically8</option>
+                    <option value="Alphabetically">Alphabetically9</option>
                 </select>
             </div>
         </div>
@@ -115,7 +151,7 @@
                     <span class="sidebar-title-br"></span>
                 </h4>
 
-                <!-- Ползунок --
+                <!-- Ползунок -->
                 <div class="s-slider">
                     <div id="slider-range"></div>
                     <p>
