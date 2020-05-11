@@ -1,2 +1,19 @@
+@import "var";
+@import "mixin/mixin";
+
+// core
 @import "core/normalize";
 @import "core/base";
+
+// components
+@import "components/headers";
+@import "components/pageTitle";
+@import "components/breadcrumbs";
+@import "components/sorting";
+@import "components/products";
+@import "components/sidebar";
+@import "components/footer";
+
+// tools
+@import "tools/cusel";
+@import "tools/ui-slider";

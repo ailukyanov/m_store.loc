@@ -7,449 +7,478 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>M-Store</title>
     <link rel="stylesheet" href="css/main.css">
-
-    <!-- jQuery -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Ползунок -->
-    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <!-- Селект -->
-    <script type="text/javascript" src="js/cusel-min-2.5.js"></script>
-    <script>
-        $(function() {
-            /* Ползунок */
-            $( "#slider-range" ).slider({
-                range: true,
-                min: 0,
-                max: 999,
-                values: [ 0, 999 ],
-                slide: function( event, ui ) {
-                    $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-                }
-            });
-            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-                " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-        });
-
-        $(function() {
-            /* Селект */
-            var params = {
-                changedEl: "select",
-                visRows: 5,
-                scrollArrows: true
-            }
-            cuSel(params);
-        });
-    </script>
 </head>
 <body>
-<!-- Кнопка наверх -->
-<a id="home-link" href="#"></a>
-    <!-- Обвертка -->
-    <div id="wrapper">
-        <!-- Верхняя панель -->
-        <div class="panel-top">
-            <div class="center clearfix">
-                <div class="social">
-                    <a href="#" class="s-fb">&nbsp;</a>
-                    <a href="#" class="s-dribble">&nbsp;</a>
-                    <a href="#" class="s-tw">&nbsp;</a>
-                    <a href="#" class="s-mail">&nbsp;</a>
-                    <a href="#" class="s-vimeo">&nbsp;</a>
+    <!-- Кнопка наверх -->
+    <a id="home-link" href="#"></a>
+
+    <header class="header">
+        <div class="header__top">
+            <div class="wrapper">
+                <div class="header__left">
+                    <div class="social">
+                        <a href="#" class="social__fb"></a>
+                        <a href="#" class="social__dribble"></a>
+                        <a href="#" class="social__tw"></a>
+                        <a href="#" class="social__mail"></a>
+                        <a href="#" class="social__vimeo"></a>
+                    </div>
                 </div>
-                <div class="basket">
-                    <a href="#"><span>Cart (2)</span></a>
+                <div class="header__right">
+                    <div class="login">
+                        <a href="#">Login</a>
+                        <span>/</span>
+                        <a href="#">Register</a>
+                    </div>
+
+                    <div class="header__basket">
+                        <a href="#">
+                            <span>Cart (2)</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="login right">
-                    <a href="#">Login</a>
-                    <span>/</span>
-                    <a href="#">Register</a>
-                </div>
-            </div>
-         </div>
-        <!-- // Верхняя панель -->
-
-        <!-- Шапка сайта -->
-        <div id="header" class="center clearfix">
-            <!-- Логотип -->
-            <div id="logo" class="left">
-                <a href="#">
-                    <img src="images/logo.png" alt="">
-                    <span>Store</span>
-                </a>
-            </div>
-            <!-- // Логотип -->
-
-            <!-- Навигация -->
-            <ul class="nav right clearfix">
-                <li class="active"><a href="#">home</a></li>
-                <li><a href="#">cd’s</a></li>
-                <li><a href="#">dvd’s</a></li>
-                <li><a href="#">news</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">contact us</a></li>
-            </ul>
-            <!-- // Навигация -->
-        </div>
-        <!-- // Шапка сайта -->
-
-        <div id="home">
-            <div class="home-bg">
-                <div class="center">
-                    <a href="/" class="link-home right">&nbsp;</a>
-                    <h2 class="title-home">shop - sidebar on the right</h2>
-                    <ul class="breadcrumbs clearfix">
-                        <li>
-                            <a href="#">Home</a>
-                            <span class="sp">&raquo;</span>
-                        </li>
-                        <li>
-                            <a href="#">Shop</a>
-                            <span class="sp">&raquo;</span>
-                        </li>
-                        <li>
-                            <span>Sidebar on the right</span>
-                        </li>
-                     </ul>
-                </div>
-            </div>
-         </div>
-
-        <div class="sorting center clearfix">
-            <ul class="s-category ">
-                <li class="active"><a href="#">all</a></li>
-                <li><a href="#">rock</a></li>
-                <li><a href="#">pop</a></li>
-                <li><a href="#">metal</a></li>
-                <li><a href="#">dance</a></li>
-                <li><a href="#">classical</a></li>
-            </ul>
-
-            <div class="s-list ">
-                <a href="#" class="ic-squares">&nbsp;</a>
-                <a href="#" class="ic-list">&nbsp;</a>
-            </div>
-
-            <div class="select-sort right">
-                <span class="sort-by">Sort by:</span>
-                <select name="" id="" style="width: 115px;">
-                    <option value="Alphabetically">Alphabetically</option>
-                    <option value="Alphabetically">Alphabetically1</option>
-                    <option value="Alphabetically">Alphabetically2</option>
-                    <option value="Alphabetically">Alphabetically3</option>
-                    <option value="Alphabetically">Alphabetically4</option>
-                    <option value="Alphabetically">Alphabetically5</option>
-                    <option value="Alphabetically">Alphabetically6</option>
-                    <option value="Alphabetically">Alphabetically7</option>
-                    <option value="Alphabetically">Alphabetically8</option>
-                    <option value="Alphabetically">Alphabetically9</option>
-                </select>
             </div>
         </div>
-
-        <div class=" middle center clearfix">
-            <!-- Сайдбар -->
-            <div class="sidebar right">
-                <h4 class="sidebar-title">price filter
-                    <span class="sidebar-title-br"></span>
-                </h4>
-
-                <!-- Ползунок -->
-                <div class="s-slider">
-                    <div id="slider-range"></div>
-                    <p>
-                        <label for="amount">Price:</label>
-                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                        <button class="btn-bl">filter</button>
-                    </p>
+        <div class="header__bottom">
+            <div class="wrapper">
+                <div class="header__left">
+                    <!-- Логотип -->
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/logo.png" alt="">
+                            <span>Store</span>
+                        </a>
+                    </div>
+                    <!-- // Логотип -->
                 </div>
-                <!-- // Ползунок -->
-
-                <h4 class="sidebar-title">best sellers
-                    <span class="sidebar-title-br"></span>
-                </h4>
-                <div class="sidebar-products ">
-                    <div class="sidebar-products-item clearfix">
-                        <div class="sidebar-products-img">
-                            <a href="#"><img src="images/image.jpg" alt=""></a>
-                        </div>
-                        <div class="sidebar-products-info">
-                            <h6><a href="#" class="product">Awaken the Hero</a></h6>
-                            <div class="rate">
-                                <div style="width: 80%;"></div>
-                            </div>
-                            <span class="comments">12 comments</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sidebar-products">
-                    <div class="sidebar-products-item clearfix">
-                        <div class="sidebar-products-img">
-                            <a href="#"><img src="images/image-2.jpg" alt=""></a>
-                        </div>
-                        <div class="sidebar-products-info">
-                            <h6><a href="#" class="product">Caribou</a></h6>
-                            <div class="rate">
-                                <div style="width: 80%;"></div>
-                            </div>
-                            <span class="comments">25 comments</span>
-                        </div>
-                    </div>
-                </div>
-
-                <h4 class="sidebar-title">our categories
-                    <span class="sidebar-title-br"></span>
-                </h4>
-                <ul class="cat-list">
-                    <li><a href="#">Rock & Roll </a><span>(5)</span></li>
-                    <li><a href="#">Hardcore & Metal </a><span>(3)</span></li>
-                    <li><a href="#">Dance & Pop </a><span>(8)</span></li>
-                    <li><a href="#">Classical Music </a><span>(12)</span></li>
-                    <li><a href="#">Jazz </a><span>(7)</span></li>
-                    <li><a href="#">Country </a><span>(15)</span></li>
-                </ul>
-
-                <h4 class="sidebar-title">search our albums
-                    <span class="sidebar-title-br"></span>
-                </h4>
-                <form action="#" class="sidebar-search">
-                    <input type="text" placeholder="&emsp;Search...">
-                    <input type="submit" value="">
-                </form>
-            </div>
-            <!-- // Сайдбар -->
-
-            <!-- Контент -->
-            <div class="content">
-                <div class="product-catalog clearfix">
-                    <div class="products ">
-                        <div class="p-img">
-                            <span class="sale">Sale</span>
-                            <a href="#" class="">
-                                <img src="images/item.png" height="210" width="210" alt="">
-                            </a>
-                        </div>
-                        <div class="p-footer">
-                            <h6><a href="#" class="product">Aqualung</a> <span>&nbsp;by Artist</span></h6>
-                            <div class="rate">
-                                <div style="width: 80%;"></div>
-                            </div>
-                            <p><span>Lorem ipsum</span> dolor sit amet an<br>adipiscing elit, sed diam nonu.</p>
-                            <div class="p-footer-price clearfix">
-                                <span class="price">$14.99</span>
-                                <span class="price-new">$8.99</span>
-                                <a href="#" class="right">add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="products ">
-                        <div class="p-img">
-                            <a href="#" class="">
-                                <img src="images/item-2.png" height="210" width="210" alt="">
-                            </a>
-                        </div>
-                        <div class="p-footer">
-                            <h6><a href="#" class="product">Awaken the Hero</a> <span>&emsp;by Artist</span></h6>
-                            <div class="rate">
-                                <div style="width: 80%;"></div>
-                            </div>
-                            <p><span>Lorem ipsum</span> dolor sit amet an<br>adipiscing elit, sed diam nonu.</p>
-                            <div class="p-footer-price clearfix">
-                                <span class="price-lg">$17.99</span>
-                                <a href="#" class="right">add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="products ">
-                        <div class="p-img">
-                            <a href="#" class="">
-                                <img src="images/item-3.png" height="210" width="210" alt="">
-                            </a>
-                        </div>
-                        <div class="p-footer">
-                            <h6><a href="#" class="product">Ravenna</a> <span>&ensp;by Artist</span></h6>
-                            <div class="rate">
-                                <div style="width: 80%;"></div>
-                            </div>
-                            <p><span>Lorem ipsum</span> dolor sit amet an<br>adipiscing elit, sed diam nonu.</p>
-                            <div class="p-footer-price clearfix">
-                                <span class="price-lg">$17.99</span>
-                                <a href="#" class="right">add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="products ">
-                        <div class="p-img">
-                            <span class="sale">Sale</span>
-                            <a href="#" class="">
-                                <img src="images/item-4.png" height="210" width="210" alt="">
-                            </a>
-                        </div>
-                        <div class="p-footer">
-                            <h6><a href="#" class="product">Oh my Deer</a> <span>&ensp;by Artist</span></h6>
-                            <div class="rate">
-                                <div style="width: 80%;"></div>
-                            </div>
-                            <p><span>Lorem ipsum</span> dolor sit amet an<br>adipiscing elit, sed diam nonu.</p>
-                            <div class="p-footer-price clearfix">
-                                <span class="price">$14.99</span>
-                                <span class="price-new">$8.99</span>
-                                <a href="#" class="right">add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="products ">
-                        <div class="p-img">
-                            <a href="#" class="">
-                                <img src="images/item-5.png" height="210" width="210" alt="">
-                            </a>
-                        </div>
-                        <div class="p-footer">
-                            <h6><a href="#" class="product">Caribou</a> <span>&ensp;by Artist</span></h6>
-                            <div class="rate">
-                                <div style="width: 80%;"></div>
-                            </div>
-                            <p><span>Lorem ipsum</span> dolor sit amet an<br>adipiscing elit, sed diam nonu.</p>
-                            <div class="p-footer-price clearfix">
-                                <span class="price-lg">$17.99</span>
-                                <a href="#" class="right">add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="products ">
-                        <div class="p-img">
-                            <a href="#" class="">
-                                <img src="images/item-6.png" height="210" width="210" alt="">
-                            </a>
-                        </div>
-                        <div class="p-footer">
-                            <h6><a href="#" class="product">Bad Dreams</a> <span>&emsp;by Artist</span></h6>
-                            <div class="rate">
-                                <div style="width: 80%;"></div>
-                            </div>
-                            <p><span>Lorem ipsum</span> dolor sit amet an<br>adipiscing elit, sed diam nonu.</p>
-                            <div class="p-footer-price clearfix">
-                                <span class="price-lg">$23.59</span>
-                                <a href="#" class="right">add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pagination">
-                    <ul class="clearfix">
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li><a href="#">&raquo;</a></li>
+                <div class="header__right">
+                    <ul class="nav">
+                        <li class="active"><a href="#">home</a></li>
+                        <li><a href="#">cd’s</a></li>
+                        <li><a href="#">dvd’s</a></li>
+                        <li><a href="#">news</a></li>
+                        <li><a href="#">portfolio</a></li>
+                        <li><a href="#">contact us</a></li>
                     </ul>
                 </div>
             </div>
-            <!-- // Контент-->
         </div>
-    </div>
-    <!-- // Обвёртка -->
+    </header>
 
-    <!-- Футер -->
-    <div id="footer">
-        <!-- Кнопка наверх -->
-        <a href="#home-link" class="btn-top">&nbsp;</a>
-        <!-- // Кнопка наверх -->
-
-        <div class="center clearfix">
-            <!-- Первая колонка футера -->
-            <div class="f-about">
-                <h5 class="f-title">Little about us</h5>
-                <p><span>Sed posuere</span> consectetur  est at.<br>
-                Nulla vitae elit libero, a pharetra.<br>
-                Lorem ipsum <span>dolor sit</span> amet, conse<br>
-                ctetuer adipiscing elit.</p>
-                <h5 class="f-title">Socialize with us</h5>
-                <div class="f-social">
-                    <a href="#" class="s-fb">&nbsp;</a>
-                    <a href="#" class="s-tw">&nbsp;</a>
-                    <a href="#" class="s-dribble">&nbsp;</a>
-                    <a href="#" class="s-digg">&nbsp;</a>
-                    <a href="#" class="s-mail">&nbsp;</a>
-                </div>
-            </div>
-            <!-- // Первая колонка футера -->
-
-            <!-- Вторая колонка футера -->
-            <div class="f-archives">
-                <h5 class="f-title">Our Archives</h5>
-                <ul class="f-list">
-                    <li><a href="#">March 2012</a></li>
-                    <li><a href="#">February 2012</a></li>
-                    <li><a href="#">January 2012</a></li>
-                    <li><a href="#">December 2011</a></li>
+    <div class="pageTitle">
+        <div class="wrapper">
+            <div class="pageTitle__left">
+                <h2 class="pageTitle__title">shop - sidebar on the right</h2>
+                <ul class="breadcrumbs">
+                    <li>
+                        <a href="#">Home</a>
+                        <span class="sp">&raquo;</span>
+                    </li>
+                    <li>
+                        <a href="#">Shop</a>
+                        <span class="sp">&raquo;</span>
+                    </li>
+                    <li>
+                        <span>Sidebar on the right</span>
+                    </li>
                 </ul>
             </div>
-            <!-- // Вторая колонка футера -->
+            <div class="pageTitle__right">
+                <a href="/" class="pageTitle__home"></a>
+            </div>
+        </div>
+    </div>
 
-            <!-- Третья колонка футера -->
-            <div class="f-popular clearfix">
-                <h5 class="f-title">Popular Posts</h5>
-                <div class="f-products ">
-                    <div class="f-products-item clearfix">
-                        <div class="f-products-img">
-                            <a href="#"><img src="images/image-3.jpg" alt=""></a>
+    <div class="sorting">
+        <div class="wrapper">
+            <div class="sorting__content">
+                <ul class="sorting__category">
+                    <li class="active"><a href="#">all</a></li>
+                    <li><a href="#">rock</a></li>
+                    <li><a href="#">pop</a></li>
+                    <li><a href="#">metal</a></li>
+                    <li><a href="#">dance</a></li>
+                    <li><a href="#">classical</a></li>
+                </ul>
+
+                <div class="sorting__box">
+                    <div class="sortingSelectSort">
+                        <span class="sort-by">Sort by:</span>
+                        <select name="" id="" style="width: 115px;">
+                            <option value="Alphabetically">Alphabetically</option>
+                            <option value="Alphabetically">Alphabetically1</option>
+                            <option value="Alphabetically">Alphabetically2</option>
+                            <option value="Alphabetically">Alphabetically3</option>
+                            <option value="Alphabetically">Alphabetically4</option>
+                            <option value="Alphabetically">Alphabetically5</option>
+                            <option value="Alphabetically">Alphabetically6</option>
+                            <option value="Alphabetically">Alphabetically7</option>
+                            <option value="Alphabetically">Alphabetically8</option>
+                            <option value="Alphabetically">Alphabetically9</option>
+                        </select>
+                    </div>
+
+                    <div class="sortingList">
+                        <a href="#" class="sortingList__item sortingList__item--squares"></a>
+                        <a href="#" class="sortingList__item sortingList__item--list"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="wrapper column">
+            <div class="column__middle">
+                <div class="catalog">
+                    <div class="products">
+                        <div class="products__item">
+                            <a href="#" class="products__img">
+                                <span class="products__sale">Sale</span>
+                                <img src="images/item.png" alt="">
+                            </a>
+
+                            <div class="products__footer">
+                                <h6><a href="#">Aqualung</a><span> by Artist</span></h6>
+                                <div class="rate">
+                                    <div style="width: 80%;"></div>
+                                </div>
+                                <p><span>Lorem ipsum</span> dolor sit amet an<br>adipiscing elit, sed diam nonu.</p>
+                                <div class="productsPrice">
+                                    <span class="productsPrice__price">$14.99</span>
+                                    <span class="productsPrice__priceNew">$8.99</span>
+                                    <a href="#" class="products__addCart">add to cart</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="f-products-info">
-                            <h6><a href="#" class="product">Great Album</a></h6>
-                            <span class="comments-white">12 comments</span>
+
+                        <div class="products__item">
+                            <a href="#" class="products__img">
+                                <img src="images/item-2.png" alt="">
+                            </a>
+
+                            <div class="products__footer">
+                                <h6><a href="#">Awaken the Hero</a> <span>&emsp;by Artist</span></h6>
+                                <div class="rate">
+                                    <div style="width: 80%;"></div>
+                                </div>
+                                <p><span>Lorem ipsum</span> dolor sit amet an<br>adipiscing elit, sed diam nonu.</p>
+                                <div class="productsPrice">
+                                    <span class="productsPrice__lg">$17.99</span>
+                                    <a href="#" class="products__addCart">add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="products__item">
+                            <a href="#" class="products__img">
+                                <img src="images/item-3.png" alt="">
+                            </a>
+
+                            <div class="products__footer">
+                                <h6><a href="#">Ravenna</a> <span>&ensp;by Artist</span></h6>
+                                <div class="rate">
+                                    <div style="width: 80%;"></div>
+                                </div>
+                                <p><span>Lorem ipsum</span> dolor sit amet an<br>adipiscing elit, sed diam nonu.</p>
+                                <div class="productsPrice">
+                                    <span class="productsPrice__lg">$17.99</span>
+                                    <a href="#" class="products__addCart">add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="products__item">
+                            <a href="#" class="products__img">
+                                <span class="products__sale">Sale</span>
+                                <img src="images/item-4.png" alt="">
+                            </a>
+
+                            <div class="products__footer">
+                                <h6><a href="#">Oh my Deer</a> <span>&ensp;by Artist</span></h6>
+                                <div class="rate">
+                                    <div style="width: 80%;"></div>
+                                </div>
+                                <p><span>Lorem ipsum</span> dolor sit amet an<br>adipiscing elit, sed diam nonu.</p>
+                                <div class="productsPrice">
+                                    <span class="productsPrice__price">$14.99</span>
+                                    <span class="productsPrice__priceNew">$8.99</span>
+                                    <a href="#" class="products__addCart">add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="products__item">
+                            <a href="#" class="products__img">
+                                <img src="images/item-5.png" alt="">
+                            </a>
+
+                            <div class="products__footer">
+                                <h6><a href="#">Caribou</a> <span>&ensp;by Artist</span></h6>
+                                <div class="rate">
+                                    <div style="width: 80%;"></div>
+                                </div>
+                                <p><span>Lorem ipsum</span> dolor sit amet an<br>adipiscing elit, sed diam nonu.</p>
+                                <div class="productsPrice">
+                                    <span class="productsPrice__lg">$17.99</span>
+                                    <a href="#" class="products__addCart">add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="products__item">
+                            <a href="#" class="products__img">
+                                <img src="images/item-6.png" alt="">
+                            </a>
+
+                            <div class="products__footer">
+                                <h6><a href="#">Bad Dreams</a> <span>&emsp;by Artist</span></h6>
+                                <div class="rate">
+                                    <div style="width: 80%;"></div>
+                                </div>
+                                <p><span>Lorem ipsum</span> dolor sit amet an<br>adipiscing elit, sed diam nonu.</p>
+                                <div class="productsPrice">
+                                    <span class="productsPrice__lg">$23.59</span>
+                                    <a href="#" class="products__addCart">add to cart</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="f-products-item clearfix">
-                        <div class="f-products-img">
-                            <a href="#"><img src="images/image-4.jpg" alt=""></a>
+                    <div class="pagination">
+                        <ul>
+                            <li class="pagination__active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li class="pagination__next"><a href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column__small">
+                <div class="sidebar">
+                    <div class="sidebar__item">
+                        <h4 class="sidebar__title">
+                            price filter
+                            <span class="sidebar__titleBr"></span>
+                        </h4>
+
+                        <div class="sidebar__container">
+                            <!-- Ползунок -->
+                            <div class="s-slider">
+                                <div id="slider-range"></div>
+                                <p>
+                                    <span>
+                                        <label for="amount">Price:</label>
+                                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                    </span>
+                                    <button class="btn-bl">filter</button>
+                                </p>
+                            </div>
+                            <!-- // Ползунок -->
                         </div>
-                        <div class="f-products-info">
-                            <h6><a href="#" class="product">Great Album</a></h6>
-                            <span class="comments-white">12 comments</span>
+                    </div>
+
+                    <div class="sidebar__item">
+                        <h4 class="sidebar__title">
+                            best sellers
+                            <span class="sidebar__titleBr"></span>
+                        </h4>
+
+                        <div class="sidebar__container sidebar__container--type1">
+                            <div class="sidebarProducts">
+                                <div class="sidebarProducts__item">
+                                    <div class="sidebarProducts__img">
+                                        <a href="#"><img src="images/image.jpg" alt=""></a>
+                                    </div>
+                                    <div class="sidebarProducts__info">
+                                        <h6 class="sidebarProducts__title">
+                                            <a href="#" class="product">Awaken the Hero</a>
+                                        </h6>
+                                        <div class="rate">
+                                            <div style="width: 80%;"></div>
+                                        </div>
+                                        <span class="comments">12 comments</span>
+                                    </div>
+                                </div>
+
+                                <div class="sidebarProducts__item">
+                                    <div class="sidebarProducts__img">
+                                        <a href="#"><img src="images/image-2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="sidebarProducts__info">
+                                        <h6 class="sidebarProducts__title">
+                                            <a href="#" class="product">Caribou</a>
+                                        </h6>
+                                        <div class="rate">
+                                            <div style="width: 80%;"></div>
+                                        </div>
+                                        <span class="comments">25 comments</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar__item">
+                        <h4 class="sidebar__title">
+                            our categories
+                            <span class="sidebar__titleBr"></span>
+                        </h4>
+
+                        <div class="sidebar__container sidebar__container--type1">
+                            <ul class="catList">
+                                <li><a href="#">Rock & Roll </a><span>(5)</span></li>
+                                <li><a href="#">Hardcore & Metal </a><span>(3)</span></li>
+                                <li><a href="#">Dance & Pop </a><span>(8)</span></li>
+                                <li><a href="#">Classical Music </a><span>(12)</span></li>
+                                <li><a href="#">Jazz </a><span>(7)</span></li>
+                                <li><a href="#">Country </a><span>(15)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sidebar__item">
+                        <h4 class="sidebar__title">
+                            search our albums
+                            <span class="sidebar__titleBr"></span>
+                        </h4>
+
+                        <div class="sidebar__container sidebar__container--type2">
+                            <form action="#" class="sidebarSearch">
+                                <input type="text" placeholder="Search...">
+                                <input type="submit" value="">
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- // Третья колонка футера -->
+        </div>
+    </div>
 
-            <!--  Четвёртая колонка футера -->
-            <div class="f-search">
-                <h5 class="f-title">Search our Site</h5>
-                <form action="#" class="f-search-form">
-                    <input type="text" placeholder="&emsp;Enter Search ...">
-                </form>
-                <h5 class="f-title">Tag Cloud</h5>
-                <a href="#" class="tags">Audio CD</a>
-                <a href="#" class="tags">Video</a>
-                <a href="#" class="tags">Playlist</a>
-                <a href="#" class="tags">Avantgarde</a>
-                <a href="#" class="tags">Melancholic</a>
+    <!-- Футер -->
+    <div class="footer">
+        <div class="footer__top">
+            <div class="wrapper">
+                <!-- Первая колонка футера -->
+                <div class="footer__item footer__item--about">
+                    <div class="footer__box">
+                        <h5 class="footer__title">Little about us</h5>
+                        <p>
+                            <span>Sed posuere</span> consectetur  est at.<br>
+                            Nulla vitae elit libero, a pharetra.<br>
+                            Lorem ipsum <span>dolor sit</span> amet, conse<br>
+                            ctetuer adipiscing elit.
+                        </p>
+                    </div>
+
+                    <div class="footer__box">
+                        <h5 class="footer__title">Socialize with us</h5>
+                        <div class="footer__social">
+                            <a href="#" class="s-fb">&nbsp;</a>
+                            <a href="#" class="s-tw">&nbsp;</a>
+                            <a href="#" class="s-dribble">&nbsp;</a>
+                            <a href="#" class="s-digg">&nbsp;</a>
+                            <a href="#" class="s-mail">&nbsp;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Первая колонка футера -->
+
+                <!-- Вторая колонка футера -->
+                <div class="footer__item footer__item--archives">
+                    <div class="footer__box">
+                        <h5 class="footer__title">Our Archives</h5>
+                        <ul class="footer__list">
+                            <li><a href="#">March 2012</a></li>
+                            <li><a href="#">February 2012</a></li>
+                            <li><a href="#">January 2012</a></li>
+                            <li><a href="#">December 2011</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- // Вторая колонка футера -->
+
+                <!-- Третья колонка футера -->
+                <div class="footer__item footer__item--popular">
+                    <h5 class="footer__title">Popular Posts</h5>
+                    <div class="sidebarProducts sidebarProducts--footer">
+                        <div class="sidebarProducts__item">
+                            <div class="sidebarProducts__img">
+                                <a href="#"><img src="images/image-3.jpg" alt=""></a>
+                            </div>
+                            <div class="sidebarProducts__info">
+                                <h6 class="sidebarProducts__title">
+                                    <a href="#" class="product">Great Album</a>
+                                </h6>
+                                <span class="commentsWhite">12 comments</span>
+                            </div>
+                        </div>
+
+                        <div class="sidebarProducts__item">
+                            <div class="sidebarProducts__img">
+                                <a href="#"><img src="images/image-4.jpg" alt=""></a>
+                            </div>
+                            <div class="sidebarProducts__info">
+                                <h6 class="sidebarProducts__title">
+                                    <a href="#" class="product">Great Album</a>
+                                </h6>
+                                <span class="commentsWhite">12 comments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Третья колонка футера -->
+
+                <!--  Четвёртая колонка футера -->
+                <div class="footer__item footer__item--search">
+                    <div class="footer__box">
+                        <h5 class="footer__title">Search our Site</h5>
+                        <form action="#">
+                            <input type="text" placeholder="Enter Search ...">
+                        </form>
+                    </div>
+
+                    <div class="footer__box">
+                        <h5 class="footer__title">Tag Cloud</h5>
+                        <div class="tags">
+                            <a href="#">Audio CD</a>
+                            <a href="#">Video</a>
+                            <a href="#">Playlist</a>
+                            <a href="#">Avantgarde</a>
+                            <a href="#">Melancholic</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Четвёртая колонка футера -->
             </div>
-            <!-- // Четвёртая колонка футера -->
         </div>
 
-        <div class="footer-bottom">
-            <div class="center clearfix">
-                <span>Musica @2013 by PremiumCoding | All Rights Reserved</span>
-                <ul class="f-nav clearfix">
+        <div class="footer__bottom">
+            <div class="wrapper">
+                <ul class="footer__nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Sitemap</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
+
+                <span>Musica @2013 by PremiumCoding | All Rights Reserved</span>
             </div>
         </div>
     </div>
-<!-- // Футер -->
+
+    <!-- Кнопка наверх -->
+    <a href="#home-link" class="btnUp"></a>
+    <!-- // Кнопка наверх -->
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/cusel-min-2.5.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

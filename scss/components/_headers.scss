@@ -1,0 +1,159 @@
+.header {
+  &__top {
+    height: 35px;
+    background-color: #2a2b2c;
+    border-top: 3px solid #cc3333;
+    box-sizing: border-box;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+
+  &__bottom {
+    padding: 20px 0;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__basket {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    height: 60px;
+    border-radius: 0 0 10px 10px;
+    background-color: #cc3333;
+    padding: 10px 12px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:before {
+      display: inline-block;
+      width: 29px;
+      height: 29px;
+      background-image: url(../images/basket.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      content: "";
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      font-size: 13px;
+      color: #ffffff;
+    }
+  }
+}
+
+.login {
+  margin-right: 30px;
+  font-size: 13px;
+
+  a, span {
+    color: #fff;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.social {
+  a {
+    display: inline-block;
+    height: 23px;
+    width: 23px;
+    vertical-align: middle;
+    background-image: url(../images/sprite-social.png);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+  }
+
+  &__fb {
+    background-position: 0 0;
+  }
+
+  &__dribble {
+    background-position: -23px 0;
+  }
+
+  &__tw {
+    background-position: -46px 0;
+  }
+
+  &__mail {
+    background-position: -69px 0;
+  }
+
+  &__vimeo {
+    background-position: -92px 0;
+  }
+}
+
+.logo {
+  img, span {
+    display: inline-block;
+    vertical-align: middle;
+    font: normal 30px/30px arial, sans-serif;
+  }
+}
+
+.nav {
+  display: flex;
+  margin-top: 25px;
+
+  li {
+    position: relative;
+
+    & + li {
+      margin-left: 30px;
+    }
+
+    a {
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &:before {
+      content:"";
+      position: absolute;
+      top: -17px;
+      left: 50%;
+      margin-left: -18px;
+      display: none;
+      width: 35px;
+      border-top: 4px solid #efc539;
+    }
+
+    &:hover:before,
+    &.active:before {
+      display: block;
+    }
+  }
+}
