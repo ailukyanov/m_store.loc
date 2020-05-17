@@ -5,11 +5,27 @@
     border-top: 3px solid #cc3333;
     box-sizing: border-box;
 
+    @include breakpointmedia($media-480, 'max-width') {
+      height: auto;
+      padding: 10px 0;
+
+      .header__right {
+        align-content: space-between;
+        justify-content: space-between;
+      }
+    }
+
     .wrapper {
       display: flex;
       justify-content: space-between;
       height: 100%;
+
+      @include breakpointmedia($media-480, 'max-width') {
+        flex-direction: column-reverse;
+      }
     }
+
+
   }
 
   &__bottom {
@@ -19,6 +35,10 @@
       display: flex;
       justify-content: space-between;
       height: 100%;
+
+      @include breakpointmedia($media-768, 'max-width') {
+        flex-direction: column;
+      }
     }
   }
 
@@ -26,12 +46,20 @@
     display: flex;
     align-items: center;
     height: 100%;
+
+    @include breakpointmedia($media-768, 'max-width') {
+      justify-content: center;
+    }
   }
 
   &__right {
     display: flex;
     align-items: center;
     height: 100%;
+
+    @include breakpointmedia($media-768, 'max-width') {
+      justify-content: center;
+    }
   }
 
   &__basket {
@@ -46,6 +74,12 @@
     padding: 10px 12px 0;
     box-sizing: border-box;
     cursor: pointer;
+
+    @include breakpointmedia($media-480, 'max-width') {
+      background-color: transparent;
+      padding: 0;
+      width: 80px;
+    }
 
     &:before {
       display: inline-block;
@@ -72,6 +106,10 @@
   margin-right: 30px;
   font-size: 13px;
 
+  @include breakpointmedia($media-480, 'max-width') {
+    margin-right: 0;
+  }
+
   a, span {
     color: #fff;
   }
@@ -80,38 +118,6 @@
     &:hover {
       text-decoration: underline;
     }
-  }
-}
-
-.social {
-  a {
-    display: inline-block;
-    height: 23px;
-    width: 23px;
-    vertical-align: middle;
-    background-image: url(../images/sprite-social.png);
-    background-repeat: no-repeat;
-    border-radius: 50%;
-  }
-
-  &__fb {
-    background-position: 0 0;
-  }
-
-  &__dribble {
-    background-position: -23px 0;
-  }
-
-  &__tw {
-    background-position: -46px 0;
-  }
-
-  &__mail {
-    background-position: -69px 0;
-  }
-
-  &__vimeo {
-    background-position: -92px 0;
   }
 }
 
@@ -127,11 +133,26 @@
   display: flex;
   margin-top: 25px;
 
+  @include breakpointmedia($media-480, 'max-width') {
+    flex-direction: column;
+    margin-top: 0;
+    padding-top: 25px;
+    align-items: center;
+  }
+
   li {
     position: relative;
 
     & + li {
       margin-left: 30px;
+
+      @include breakpointmedia($media-768, 'max-width') {
+        margin-left: 15px;
+      }
+
+      @include breakpointmedia($media-480, 'max-width') {
+        margin-left: 0;
+      }
     }
 
     a {
@@ -149,6 +170,10 @@
       display: none;
       width: 35px;
       border-top: 4px solid #efc539;
+
+      @include breakpointmedia($media-480, 'max-width') {
+        display: none!important;
+      }
     }
 
     &:hover:before,

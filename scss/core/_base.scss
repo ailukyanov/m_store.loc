@@ -10,9 +10,11 @@ body {
 }
 
 .wrapper {
-  max-width: 960px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 ol, ul {
@@ -69,6 +71,40 @@ a, a:hover {
   padding-left: 20px;
 }
 
-.main {
-  padding-bottom: 58px;
+.social {
+  a {
+    display: inline-block;
+    height: 23px;
+    width: 23px;
+    vertical-align: middle;
+    background-image: url(../images/sprite-social.png);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+  }
+
+  &--black {
+    a {
+      background-image: url(../images/f-sprite-social.png);
+    }
+  }
+
+  &__fb {
+    background-position: 0 0;
+  }
+
+  &__dribble {
+    background-position: -23px 0;
+  }
+
+  &__tw {
+    background-position: -46px 0;
+  }
+
+  &__mail {
+    background-position: -69px 0;
+  }
+
+  &__vimeo {
+    background-position: -92px 0;
+  }
 }

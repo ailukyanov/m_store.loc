@@ -15,6 +15,27 @@
     &:nth-of-type(3n + 3) {
       margin-right: 0;
     }
+
+    @include breakpointmedia($media-960, 'max-width') {
+      height: auto;
+    }
+
+    @include breakpointmedia($media-768, 'max-width') {
+      width: calc((100% / 2) - 8px);
+
+      &:nth-of-type(3n + 3) {
+        margin-right: 10px;
+      }
+
+      &:nth-of-type(2n + 2) {
+        margin-right: 0;
+      }
+    }
+
+    @include breakpointmedia($media-480, 'max-width') {
+      width: 100%;
+      margin-right: 0!important;
+    }
   }
 
   &__img {
@@ -22,6 +43,10 @@
     display: block;
     height: 220px;
     overflow: hidden;
+
+    @include breakpointmedia($media-960, 'max-width') {
+      height: auto;
+    }
 
     span {
       display: inline-block;
@@ -183,5 +208,37 @@
     a {
       line-height: 14px;
     }
+  }
+}
+
+.main {
+  padding-bottom: 58px;
+
+  @include breakpointmedia($media-960, 'max-width') {
+    .column {
+      flex-direction: column-reverse;
+    }
+
+    .column__small {
+      width: 100%;
+      flex: 0 0 100%;
+    }
+
+    .column__middle {
+      width: 100%;
+      flex: 0 0 100%;
+    }
+
+    .sidebar__item {
+      display: none;
+
+      &:nth-of-type(1) {
+        display: block;
+      }
+    }
+  }
+
+  @include breakpointmedia($media-768, 'max-width') {
+    padding-bottom: 20px;
   }
 }

@@ -13,13 +13,19 @@ $(function() {
     }
   });
   amount.val("$" + sliderRange.slider( "values", 0 ) + " - $" + sliderRange.slider( "values", 1 ) );
-});
 
-$(function() {
   /* Селект */
   cuSel({
     changedEl: "select",
     visRows: 5,
     scrollArrows: true
+  });
+
+  $('.btnUp').on('click', function (e) {
+    e.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
   });
 });
