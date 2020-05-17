@@ -9,7 +9,7 @@ $(function() {
     max: 999,
     values: [ 0, 999 ],
     slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      amount.val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
     }
   });
   amount.val("$" + sliderRange.slider( "values", 0 ) + " - $" + sliderRange.slider( "values", 1 ) );
